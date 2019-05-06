@@ -1,0 +1,12 @@
+{
+  "name": "Heim New Tab",
+  "version": "0.1",
+  "description": "Minimalist new tab with quick access to bookmarks and most visited pages",
+  "manifest_version": 2,
+  "permissions": [
+    "bookmarks", "history", "sessions", "tabs", "storage", "management"
+  ],
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  }
+}

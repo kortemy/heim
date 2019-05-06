@@ -1,0 +1,43 @@
+* {
+  font-family: 'Quicksand', serif;
+}
+
+.subtitle>*>:first-child {
+  font-size: unset;
+  /* color: unset; */
+}
+.subtitle a {
+  color: lightgrey;
+}
+
+.link-container {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.favorite {
+  cursor: pointer;
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 3px;
+  color: lightgray;
+}
+
+.favorite:hover {
+  color: gray;
+}
+
+.favorite.active {
+  color: darkorange;
+}
+
+.app {
+  width: 180px;
+  cursor: pointer;
+  text-align: center;
+}
+
+a:hover {
+  text-decoration: none;
+}

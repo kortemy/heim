@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>New Tab</title>
+  <meta name="description" content="Heim, the modern new page">
+  <meta name="author" content="kortemy">
+
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="deps/uikit.min.css" />
+  
+  <!-- UIkit JS -->
+  <script src="deps/uikit.min.js"></script>
+  <script src="deps/uikit-icons.min.js"></script>
+  <script src="storage-favorites.js"></script>
+  <script src="storage-folders.js"></script>
+  <script src="storage-period.js"></script>
+  <script src="render.js"></script>
+  <script src="heim.js"></script>
+  
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="uk-container uk-container-expand">
+    <div class="uk-navbar-left">
+      <ul class="nav uk-navbar-nav">
+        <li ><a id="link-home" style="color: #1e87f0" href="#"><span class="uk-margin-small-right uk-icon" uk-icon="album"></span>Heim</a></li>
+        <li class="link-item"><a id="link-bookmarks" href="#">Bookmarks</a></li>
+        <li class="link-item"><a id="link-devices" href="#">Devices</a></li>
+        <li class="link-item"><a id="link-apps" href="#">Apps</a></li>
+      </ul>
+    </div>
+
+    <div id="home" class="page">
+      <div class="uk-child-width-expand@s uk-text-left" uk-grid>
+          <div class="uk-first-column">
+              <ul class="subtitle uk-subnav">
+                  <li class="uk-active"><span>Favorites</span></li>
+              </ul>
+              <ul id="list-fv" class="uk-list">
+              </ul>
+          </div>
+          <div>
+              <div class="uk-text-uppercase">
+                <ul class="subtitle uk-subnav">
+                    <li class="uk-active"><span>Most Visited</span></li>
+                    <li class="period-item"><a id="period-1" href="#">1 day</a></li>
+                    <li class="period-item"><a id="period-7" href="#">7 days</a></li>
+                    <li class="period-item"><a id="period-30" href="#">30 days</a></li>
+                    <li class="period-item"><a id="period-365" href="#">365 days</a></li>
+                </ul>
+              </div>
+              <ul id="list-mv" class="uk-list">
+              </ul>
+          </div>
+          <div>
+              <ul class="subtitle uk-subnav">
+                  <li class="uk-active"><span>Recently Closed</span></li>
+              </ul>
+              <ul id="list-rc" class="uk-list">
+              </ul>
+          </div>
+      </div>
+    </div>
+    <div id="bookmarks" style="display: none" class="page">
+      <div id="bookmarks-grid" class="uk-child-width-expand@s uk-text-left" uk-grid>
+      </div>
+    </div>
+    <div id="devices" style="display: none" class="page">
+      <div id="devices-grid" class="uk-child-width-expand@s uk-text-left" uk-grid>
+      </div>
+    </div>
+    <div id="apps" style="display: none" class="page">
+      <div id="apps-grid" class="uk-flex uk-flex-center">
+      </div>
+    </div>
+  </div>
+
+</div>
+  <script src="index.js"></script>
+</body>
+</html>
