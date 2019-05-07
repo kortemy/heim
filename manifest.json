@@ -6,6 +6,9 @@
   "permissions": [
     "bookmarks", "history", "sessions", "tabs", "storage", "management"
   ],
+  "icons": { 
+   "128": "logo.png" 
+  },
   "chrome_url_overrides" : {
     "newtab": "index.html"
   }
