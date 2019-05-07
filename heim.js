@@ -90,6 +90,23 @@ class Heim {
     while (list.firstChild) list.removeChild(list.firstChild)
 
     let favorites = this.favoriteStorage.get()
+
+    if (Object.values(favorites).length === 0) {
+      let markup = `
+        <li>
+          <div>
+            Nothing here!
+          </div>
+          <div>
+            You can add favorites by clicking on the <span uk-icon="icon: star; ratio: 0.7"></span> next to bookmarks or links
+          </div>
+        </li>
+      `
+      let el = await this.renderer.render(markup)
+      list.appendChild(el)
+      return
+    }
+
     return Promise.all(Object.values(favorites).map(async fv => {
       if (fv.id) {
         return this.renderer.renderBookmark(fv, 'list-fv', 'home')
@@ -102,7 +119,6 @@ class Heim {
     while (list.firstChild) list.removeChild(list.firstChild)
 
     const period = this.periodStorage.get()
-    console.log(period)
     const query = ''
     const maxResults = 2147483647 // maximum
     const duration = (period * 24 * 60 * 60 * 1000)
