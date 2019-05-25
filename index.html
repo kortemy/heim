@@ -8,70 +8,102 @@
   <meta name="description" content="Heim, the modern new page">
   <meta name="author" content="kortemy">
 
+  <script src="lib/themes.js"></script>
+  <script src="lib/storage.js"></script>
+  <script src="lib/render.js"></script>
+  <script src="lib/heim.js"></script>
+  <script src="lib/init.js"></script>
+
   <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
   <!-- UIkit CSS -->
   <link rel="stylesheet" href="deps/uikit.min.css" />
   
-  <!-- UIkit JS -->
-  <script src="deps/uikit.min.js"></script>
-  <script src="deps/uikit-icons.min.js"></script>
-  <script src="storage-favorites.js"></script>
-  <script src="storage-folders.js"></script>
-  <script src="storage-period.js"></script>
-  <script src="render.js"></script>
-  <script src="heim.js"></script>
-  
   <link rel="stylesheet" href="index.css">
+  <!-- UIkit JS -->
+
+  <!-- <script async defer src="deps/uikit.min.js"></script>
+  <script async src="deps/uikit-icons.min.js"></script> -->
+  
 </head>
 
 <body>
   <div class="uk-container uk-container-expand">
-    <div class="uk-navbar-left">
-      <ul class="nav uk-navbar-nav">
-        <li ><a id="link-home" style="color: #1e87f0" href="#"><span class="uk-margin-small-right uk-icon" uk-icon="album"></span>Heim</a></li>
-        <li class="link-item"><a id="link-bookmarks" href="#">Bookmarks</a></li>
-        <li class="link-item"><a id="link-devices" href="#">Devices</a></li>
-        <li class="link-item"><a id="link-apps" href="#">Apps</a></li>
-      </ul>
-    </div>
+    <nav class="uk-navbar-container uk-navbar">
+      <div class="uk-navbar-left">
+        <ul class="nav uk-navbar-nav">
+          <li >
+            <a id="link-home" class="link" href="#">
+              <span class="uk-margin-small-right">
+                <svg class="logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                  <path id="XMLID_2_" fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M476.2,169.8v199.9
+                    c0,6.6-5.4,12-12,12H47.8c-6.6,0-12-5.4-12-12V169.8"/>
+                  <line id="XMLID_3_" fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" x1="95" y1="248" x2="418" y2="248"/>
+                  <line id="XMLID_4_" fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" x1="137" y1="198" x2="375" y2="198"/>
+                  <line id="XMLID_1_" fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" x1="167" y1="148" x2="346" y2="148"/>
+                  <line id="XMLID_5_" fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" x1="201" y1="98" x2="320" y2="98"/>
+                </svg>         
+              </span>
+              Heim
+            </a>
+          </li>
+          <li class="link-item"><a id="link-bookmarks" class="text light hover" href="#">Bookmarks</a></li>
+          <li class="link-item"><a id="link-devices" class="text light hover" href="#">Devices</a></li>
+          <li class="link-item"><a id="link-apps" class="text light hover" href="#">Apps</a></li>
+        </ul>
+      </div>
+      <div class="uk-navbar-right">
+        <a id="theme-light" class="theme" href="#" style="display: none;" alt="Light mode">
+          <svg class="icon icon-theme" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+            <line id="XMLID_3_" fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" x1="256" y1="39" x2="256" y2="106"/>
+            <line id="XMLID_5_" fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" x1="40" y1="256" x2="107" y2="256"/>
+            <circle id="XMLID_1_" fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" cx="256.3" cy="255.6" r="109.2"/>
+            <line id="XMLID_2_" fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" x1="256" y1="405" x2="256" y2="472"/>
+            <line id="XMLID_4_" fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" x1="406" y1="256" x2="473" y2="256"/>
+            <line id="XMLID_9_" fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" x1="103.1" y1="103.8" x2="150.4" y2="151.1"/>
+            <line id="XMLID_8_" fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" x1="103.8" y1="409.9" x2="151.1" y2="362.6"/>
+            <line id="XMLID_7_" fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" x1="361.9" y1="362.6" x2="409.2" y2="409.9"/>
+            <line id="XMLID_6_" fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" x1="362.6" y1="151.1" x2="409.9" y2="103.8"/>
+          </svg>
+        </a>
+        <a id="theme-dark" class="theme" href="#" style="display: none;" alt="Dark mode">
+          <svg class="icon icon-theme" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+            <path id="XMLID_4_" fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M372.2,367.4
+              c-100.4,0-181.8-81.4-181.8-181.8c0-40.6,13.3-78.1,35.8-108.4c-77.1,21-133.8,91.6-133.8,175.4c0,100.4,81.4,181.8,181.8,181.8
+              c59.8,0,112.8-28.9,146-73.4C404.8,365.2,388.8,367.4,372.2,367.4z"/>
+          </svg>
+        </a>
+      </div>
+    </nav>
+
 
     <div id="home" class="page">
-      <div class="uk-child-width-expand@s uk-text-left" uk-grid>
+      <div class="uk-child-width-expand@s uk-text-left uk-grid" uk-grid>
           <div class="uk-first-column">
-              <ul class="subtitle uk-subnav">
-                  <li class="uk-active"><span>Favorites</span></li>
-              </ul>
-              <ul id="list-fv" class="uk-list">
-              </ul>
+            <div class="uk-text-uppercase text light">Favorites</div>
+            <ul id="list-fv" class="uk-list">
+            </ul>
           </div>
           <div>
-              <div class="uk-text-uppercase">
-                <ul class="subtitle uk-subnav">
-                    <li class="uk-active"><span>Most Visited</span></li>
-                    <li class="period-item"><a id="period-1" href="#">1 day</a></li>
-                    <li class="period-item"><a id="period-7" href="#">7 days</a></li>
-                    <li class="period-item"><a id="period-30" href="#">30 days</a></li>
-                    <li class="period-item"><a id="period-365" href="#">365 days</a></li>
-                </ul>
-              </div>
-              <ul id="list-mv" class="uk-list">
-              </ul>
+            <div class="uk-text-uppercase text light">Most Visited</div>
+            <ul id="list-mv" class="uk-list">
+            </ul>
           </div>
           <div>
-              <ul class="subtitle uk-subnav">
-                  <li class="uk-active"><span>Recently Closed</span></li>
-              </ul>
-              <ul id="list-rc" class="uk-list">
-              </ul>
+            <div class="uk-text-uppercase text light">Recently Closed</div>
+            <ul id="list-rc" class="uk-list">
+            </ul>
           </div>
       </div>
     </div>
     <div id="bookmarks" style="display: none" class="page">
-      <div id="bookmarks-grid" class="uk-child-width-expand@s uk-text-left" uk-grid>
+      <div id="bookmarks-grid" class="uk-child-width-expand@s uk-text-left uk-grid" uk-grid>
       </div>
     </div>
     <div id="devices" style="display: none" class="page">
-      <div id="devices-grid" class="uk-child-width-expand@s uk-text-left" uk-grid>
+      <div id="devices-grid" class="uk-child-width-expand@s uk-text-left uk-grid" uk-grid>
       </div>
     </div>
     <div id="apps" style="display: none" class="page">
@@ -80,7 +112,6 @@
     </div>
   </div>
 
-</div>
   <script src="index.js"></script>
 </body>
 </html>

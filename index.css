@@ -1,7 +1,12 @@
 * {
-  font-family: 'Quicksand', serif;
+  font-family: 'Quicksand', sans-serif;
 }
-
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
 .subtitle>*>:first-child {
   font-size: unset;
   /* color: unset; */
@@ -20,7 +25,6 @@
   cursor: pointer;
   position: absolute;
   margin-left: -20px;
-  margin-top: 3px;
   color: lightgray;
 }
 
@@ -40,4 +44,20 @@
 
 a:hover {
   text-decoration: none;
+}
+
+svg.icon {
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+}
+
+svg.icon path {
+  stroke-width: 15px;
+}
+
+svg.logo {
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
 }
