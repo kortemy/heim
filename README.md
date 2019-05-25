@@ -2,6 +2,8 @@
 
 Heim is the minimalist new tab for Chrome.
 
+Install from [Chrome Web Store](https://chrome.google.com/webstore/detail/heim-new-tab/fokcicjjoabfaijamhikihdibpannnpa).
+
 # Features
 
 * Managing favorite pages and bookmars
