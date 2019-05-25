@@ -10,10 +10,10 @@ Heim is the minimalist new tab for Chrome.
 * Bookmark browser
 * Device browser
 * App browser
+* Dark mode!
 
 # Planned stuff
 
-* Dark theme
 * Sorting of favorites
 * Search bookmarks
 * Clear browsing history
