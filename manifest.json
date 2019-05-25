@@ -1,6 +1,6 @@
 {
   "name": "Heim New Tab",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Minimalist new tab with quick access to bookmarks and most visited pages",
   "manifest_version": 2,
   "permissions": [
