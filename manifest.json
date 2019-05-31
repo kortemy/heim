@@ -9,6 +9,9 @@
   "icons": { 
    "128": "logo.png" 
   },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
   "chrome_url_overrides" : {
     "newtab": "index.html"
   }
