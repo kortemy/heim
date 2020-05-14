@@ -7,6 +7,7 @@ Install from [Chrome Web Store](https://chrome.google.com/webstore/detail/heim-n
 # Features
 
 * Managing favorite pages and bookmars
+* Sorting favorites
 * Listing most visited pages in the chosen time period
 * Listing all recently closed pages
 * Bookmark browser
@@ -16,7 +17,6 @@ Install from [Chrome Web Store](https://chrome.google.com/webstore/detail/heim-n
 
 # Planned stuff
 
-* Sorting of favorites
 * Search bookmarks
 * Clear browsing history
 * More customization options
